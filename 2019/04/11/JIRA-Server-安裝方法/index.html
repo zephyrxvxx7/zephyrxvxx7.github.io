@@ -396,7 +396,7 @@ height:50vh;
             <main class="main post-page">
     <article class="article-entry">
         <img src="/2019/04/11/JIRA-Server-安裝方法/Jira_Software@2x-blue.png" title="Jira Software">
-<p>最近因為工作上的需要，主管想要一個可以完善的issue tracking平台，於是我第一個想到的就是JIRA。<br>而我在研究一陣子之後發現，JIRA的線上版非常不好用，插件也非常少，所以就決定轉戰本地版本(JIRA Server)。<br><a id="more"></a><br>但是在決定使用JIRA Server之後，在安裝的時候遇到了非常多的坑，這篇文章算是記錄起來，避免之後犯一樣的錯誤又要重查資料。</p>
+<p>最近因為工作上的需要，主管想要一個可以完善的issue tracking平台，而主管就馬上跟我介紹JIRA，因為他也有使用的經驗。<br>而我在研究一陣子之後，發現JIRA的線上版非常不好用，插件也非常少，所以就決定轉戰本地版本(JIRA Server)。<br><a id="more"></a><br>但是在決定使用JIRA Server之後，在安裝的時候遇到了非常多的坑，這篇文章算是記錄起來，避免之後犯一樣的錯誤又要重查資料。</p>
 <hr>
 <h1 id="確認系統需求"><a href="#確認系統需求" class="headerlink" title="確認系統需求"></a>確認系統需求</h1><ul>
 <li>作業系統<ul>
@@ -443,7 +443,7 @@ height:50vh;
 <h2 id="下載並安裝MySQL-Server"><a href="#下載並安裝MySQL-Server" class="headerlink" title="下載並安裝MySQL Server"></a>下載並安裝MySQL Server</h2><p>首先先安裝mysql-server</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install mysql-server</span><br></pre></td></tr></table></figure>
 <p>檢查MySQL的版本，此教學是以5.7.X做的，其他版本請至JIRA官方觀看</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">sudo mysql <span class="comment">--version</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo mysql --version</span><br></pre></td></tr></table></figure>
 <p>接著，用<strong>管理者權限</strong>編輯<code>/etc/mysql/my.cnf</code>。</p>
 <ul>
 <li><p>設定以下規則</p>
@@ -475,7 +475,7 @@ height:50vh;
 <h2 id="下載MySQL-JDBC驅動至JIRA-library"><a href="#下載MySQL-JDBC驅動至JIRA-library" class="headerlink" title="下載MySQL JDBC驅動至JIRA library"></a>下載MySQL JDBC驅動至JIRA library</h2><p>下載JDBC Connector/J 5.1<br>如果連結失效的話請至<a href="https://dev.mysql.com/downloads/connector/j/5.1.html" target="_blank" rel="noopener">這裡</a>找</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.47.tar.gz</span><br></pre></td></tr></table></figure>
 <p>接著解壓縮並且移動到<code>&lt;Jira-installation-directory&gt;/lib</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tar -xzf mysql-connector-java-5.1.47.tar.gz</span><br><span class="line">mv mysql-connector-java-5.1.47.jar &lt;Jira-installation-directory&gt;/lib/</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -xzf mysql-connector-java-5.1.47.tar.gz</span><br><span class="line">mv mysql-connector-java-5.1.47.bin.jar &lt;Jira-installation-directory&gt;/lib/</span><br></pre></td></tr></table></figure>
 <h1 id="執行JIRA"><a href="#執行JIRA" class="headerlink" title="執行JIRA"></a>執行JIRA</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> &lt;installation-directory&gt;/atlassian-jira-software-8.0.2-standalone/bin/</span><br><span class="line">sudo ./start-jira.sh</span><br></pre></td></tr></table></figure>
 <p><img src="sgTIY3F.png" alt><br>接著，JIRA就會作為背景服務執行了</p>
 <p>在瀏覽器輸入<code>http://(IP):8080/</code>即可使用JIRA</p>
