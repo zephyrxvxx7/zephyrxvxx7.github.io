@@ -412,12 +412,14 @@ height:50vh;
 <blockquote>
 <p>由於 Oracle 的 Java 是屬於 Oracle 公司所有，它的授權方式不是一般的開放原始碼授權，安裝時會跳出類似這種授權條款訊息，必須選擇「Yes」同意授權條款才能安裝 Oracle 的 Java。</p>
 </blockquote>
+<p>如果無法安裝，可以改為安裝OpenJRE</p>
+<p><code>sudo apt-get install openjdk-8-jre</code></p>
 <h3 id="設定系統Java版本"><a href="#設定系統Java版本" class="headerlink" title="設定系統Java版本"></a>設定系統Java版本</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo update-alternatives --config java</span><br></pre></td></tr></table></figure>
-<p><img src="QIs16zV.png" alt="Java8"><br>選擇Path為<code>/usr/lib/jvm/java-8-oracle/jre/bin/java</code>的編號，在這裡是<strong>2</strong></p>
-<p>接著設定<code>JAVA_HOME</code>環境變數</p>
+<p><img src="QIs16zV.png" alt="Java8"><br>選擇為<code>java8</code>的編號，在這裡是==2==</p>
+<p>設定<code>JAVA_HOME</code>環境變數</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> JAVA_HOME=<span class="string">"/usr/lib/jvm/java-8-oracle"</span></span><br></pre></td></tr></table></figure>
 <p>確認是否有正確載入</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/environment</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$JAVA_HOME</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">env | grep JAVA_HOME</span><br></pre></td></tr></table></figure>
 <p>應會顯示</p>
 <blockquote>
 <p>/usr/lib/jvm/java-8-oracle</p>
@@ -439,7 +441,7 @@ height:50vh;
 <p>設定環境變數</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> &lt;home-directory&gt;</span><br><span class="line"><span class="built_in">export</span> JIRA_HOME=$(<span class="built_in">pwd</span>)</span><br></pre></td></tr></table></figure>
 <p>確認是否有設定正確</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/environment</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$JIRA_HOME</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">env | grep JIRA_HOME</span><br></pre></td></tr></table></figure>
 <p>應會顯示</p>
 <blockquote>
 <p>/usr/(user)/\<home-directory></home-directory></p>
@@ -477,6 +479,7 @@ height:50vh;
 <p><code>&lt;JIRADB&gt;</code>請自行替換為自訂的名稱，這裡以<strong>JiraDB</strong>來命名<br><code>&lt;USERNAME&gt;</code>為有連接數據庫權限的JIRA使用者<br><code>&lt;JIRA_SERVER_HOSTNAME&gt;</code>為JIRA SERVER所在的ip位置<br><code>&lt;PASSWORD&gt;</code>為使用者的密碼</p>
 </blockquote>
 <p>輸入<code>exit</code>即可離開mysql指令介面</p>
+<p>以服務形式開啟SQL Server<br><code>service mysqld start</code></p>
 <h3 id="下載MySQL-JDBC驅動至JIRA-library"><a href="#下載MySQL-JDBC驅動至JIRA-library" class="headerlink" title="下載MySQL JDBC驅動至JIRA library"></a>下載MySQL JDBC驅動至JIRA library</h3><p>下載JDBC Connector/J 5.1<br>如果連結失效的話請至<a href="https://dev.mysql.com/downloads/connector/j/5.1.html" target="_blank" rel="noopener">這裡</a>找</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.47.tar.gz</span><br></pre></td></tr></table></figure>
 <p>接著解壓縮並且移動到<code>&lt;Jira-installation-directory&gt;/lib</code></p>
@@ -655,10 +658,6 @@ top:50vh;
     
     
     
-    
-    
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
         Total : 3
@@ -732,9 +731,9 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="Life"><span class="iconfont-archer">&#xe60a;</span>Life</span>
-    
         <span class="sidebar-category-name" data-categories="3C"><span class="iconfont-archer">&#xe60a;</span>3C</span>
+    
+        <span class="sidebar-category-name" data-categories="Life"><span class="iconfont-archer">&#xe60a;</span>Life</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
