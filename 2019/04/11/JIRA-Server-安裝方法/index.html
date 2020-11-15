@@ -10,18 +10,18 @@
 
 
 
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
     <meta name="author" content="Zephyr">
     <meta name="renderer" content="webkit">
     <meta name="copyright" content="Zephyr">
     
     <meta name="keywords" content="hexo,hexo-blog,Coding,Life,Photography">
     
-    <meta name="description" content>
+    <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>JIRA Server 安裝方法 · Zephyr&#39;s Blog</title>
     <style type="text/css">
     @font-face {
@@ -75,10 +75,10 @@
 
 </style>
 
-    <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
+    <link rel="preload" href= "/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="stylesheet" href= "/css/mobile.css?v=20180824" media="(max-width: 980px)">
     
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -187,10 +187,10 @@
 }( typeof global !== "undefined" ? global : this ) );
 </script>
 
-    <link rel="icon" href="/assets/favicon.ico">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js" as="script">
+    <link rel="icon" href= "/assets/favicon.ico" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" as="script" />
+    <link rel="preload" href="/scripts/main.js" as="script" />
     <link rel="preload" as="font" href="/font/Oswald-Regular.ttf" crossorigin>
     <link rel="preload" as="font" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" crossorigin>
     
@@ -200,7 +200,7 @@
     
     <!-- 谷歌统计  -->
     
-</head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
     
         <body class="post-body">
@@ -214,14 +214,14 @@
     
     <div class="banner">
             <div class="blog-title">
-                <a href="/">Zephyr&#39;s Blog.</a>
+                <a href="/" >Zephyr&#39;s Blog.</a>
             </div>
             <div class="post-title">
                 <a href="#" class="post-name">JIRA Server 安裝方法</a>
             </div>
     </div>
     
-    <a class="home-link" href="/">Zephyr's Blog.</a>
+    <a class="home-link" href=/>Zephyr's Blog.</a>
 </header>
     <div class="wrapper">
         <div class="site-intro" style="
@@ -264,9 +264,9 @@ height:50vh;
             <div class="post-intros">
                 <!-- 文章页标签  -->
                 
-                    <div class="post-intro-tags">
+                    <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="教學">教學</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "教學">教學</a>
     
 </div>
                 
@@ -395,8 +395,11 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <img src="/2019/04/11/JIRA-Server-安裝方法/Jira_Software@2x-blue.png" title="Jira Software">
-<p>最近因為工作上的需要，主管想要一個可以完善的issue tracking平台，而主管就馬上跟我介紹JIRA，因為他也有使用的經驗。<br>而我在研究一陣子之後，發現JIRA的線上版非常不好用，插件也非常少，所以就決定轉戰本地版本(JIRA Server)。<br><a id="more"></a><br>但是在決定使用JIRA Server之後，在安裝的時候遇到了非常多的坑，這篇文章算是記錄起來，避免之後犯一樣的錯誤又要重查資料。</p>
+        <img src="/2019/04/11/JIRA-Server-%E5%AE%89%E8%A3%9D%E6%96%B9%E6%B3%95/Jira_Software@2x-blue.png" class="" title="Jira Software">
+
+<p>最近因為工作上的需要，主管想要一個可以完善的issue tracking平台，而主管就馬上跟我介紹JIRA，因為他也有使用的經驗。<br>而我在研究一陣子之後，發現JIRA的線上版非常不好用，插件也非常少，所以就決定轉戰本地版本(JIRA Server)。</p>
+<a id="more"></a>
+<p>但是在決定使用JIRA Server之後，在安裝的時候遇到了非常多的坑，這篇文章算是記錄起來，避免之後犯一樣的錯誤又要重查資料。</p>
 <hr>
 <h2 id="確認系統需求"><a href="#確認系統需求" class="headerlink" title="確認系統需求"></a>確認系統需求</h2><ul>
 <li>作業系統<ul>
@@ -407,61 +410,75 @@ height:50vh;
 <li>JAVA 8</li>
 <li>PostgreSQL 9.6 / MySQL 5.7 / Oracle 12c R1 / SQL Server 2016</li>
 </ul>
-<h2 id="安裝步驟-以Ubuntu為例"><a href="#安裝步驟-以Ubuntu為例" class="headerlink" title="安裝步驟(以Ubuntu為例)"></a>安裝步驟(以Ubuntu為例)</h2><p><a href="https://confluence.atlassian.com/adminjiraserver/installing-jira-applications-on-linux-938846841.html" target="_blank" rel="noopener">官方安裝教學</a></p>
+<h2 id="安裝步驟-以Ubuntu為例"><a href="#安裝步驟-以Ubuntu為例" class="headerlink" title="安裝步驟(以Ubuntu為例)"></a>安裝步驟(以Ubuntu為例)</h2><p><a target="_blank" rel="noopener" href="https://confluence.atlassian.com/adminjiraserver/installing-jira-applications-on-linux-938846841.html">官方安裝教學</a></p>
 <h3 id="安裝Java8"><a href="#安裝Java8" class="headerlink" title="安裝Java8"></a>安裝Java8</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo add-apt-repository ppa:webupd8team/java</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install oracle-java8-installer</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>由於 Oracle 的 Java 是屬於 Oracle 公司所有，它的授權方式不是一般的開放原始碼授權，安裝時會跳出類似這種授權條款訊息，必須選擇「Yes」同意授權條款才能安裝 Oracle 的 Java。</p>
 </blockquote>
 <p>如果無法安裝，可以改為安裝OpenJRE</p>
 <p><code>sudo apt-get install openjdk-8-jre</code></p>
 <h3 id="設定系統Java版本"><a href="#設定系統Java版本" class="headerlink" title="設定系統Java版本"></a>設定系統Java版本</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo update-alternatives --config java</span><br></pre></td></tr></table></figure>
+
 <p><img src="QIs16zV.png" alt="Java8"><br>選擇為<code>java8</code>的編號，在這裡是==2==</p>
 <p>設定<code>JAVA_HOME</code>環境變數</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> JAVA_HOME=<span class="string">"/usr/lib/jvm/java-8-oracle"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> JAVA_HOME=<span class="string">&quot;/usr/lib/jvm/java-8-oracle&quot;</span></span><br></pre></td></tr></table></figure>
+
 <p>確認是否有正確載入</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">env | grep JAVA_HOME</span><br></pre></td></tr></table></figure>
+
 <p>應會顯示</p>
 <blockquote>
 <p>/usr/lib/jvm/java-8-oracle</p>
 </blockquote>
 <h3 id="下載JIRA"><a href="#下載JIRA" class="headerlink" title="下載JIRA"></a>下載JIRA</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://www.atlassian.com/software/jira/downloads/binary/atlassian-jira-software-8.0.2.tar.gz</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p><strong>這裡的8.0.2請自行替換版本，如果連結失效需至官網尋找連結</strong></p>
 </blockquote>
 <h3 id="選擇安裝位置"><a href="#選擇安裝位置" class="headerlink" title="選擇安裝位置"></a>選擇安裝位置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir &lt;installation-directory&gt;</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p><code>&lt;installation-directory&gt;</code>請自行替換為自訂的名稱，這裡以<strong>jirasoftware</strong>來命名</p>
 </blockquote>
 <p>解壓縮JIRA程式集</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -xzf atlassian-jira-software-8.0.2.tar.gz -C &lt;installation-directory&gt;</span><br></pre></td></tr></table></figure>
+
 <h3 id="建立JIRA的檔案存放目錄"><a href="#建立JIRA的檔案存放目錄" class="headerlink" title="建立JIRA的檔案存放目錄"></a>建立JIRA的檔案存放目錄</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir &lt;home-directory&gt;</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p><code>&lt;home-directory&gt;</code>請自行替換為自訂的名稱，這裡以<strong>jirasoftware-home</strong>來命名</p>
 </blockquote>
 <p>設定環境變數</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> &lt;home-directory&gt;</span><br><span class="line"><span class="built_in">export</span> JIRA_HOME=$(<span class="built_in">pwd</span>)</span><br></pre></td></tr></table></figure>
+
 <p>確認是否有設定正確</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">env | grep JIRA_HOME</span><br></pre></td></tr></table></figure>
+
 <p>應會顯示</p>
 <blockquote>
 <p><code>/usr/(user)/&lt;home-directory&gt;</code></p>
 </blockquote>
-<h2 id="安裝MySQL-適用於5-7-X"><a href="#安裝MySQL-適用於5-7-X" class="headerlink" title="安裝MySQL(適用於5.7.X)"></a>安裝MySQL(適用於5.7.X)</h2><p><a href="https://confluence.atlassian.com/adminjiraserver/connecting-jira-applications-to-mysql-5-7-966063305.html" target="_blank" rel="noopener">官方教學</a></p>
+<h2 id="安裝MySQL-適用於5-7-X"><a href="#安裝MySQL-適用於5-7-X" class="headerlink" title="安裝MySQL(適用於5.7.X)"></a>安裝MySQL(適用於5.7.X)</h2><p><a target="_blank" rel="noopener" href="https://confluence.atlassian.com/adminjiraserver/connecting-jira-applications-to-mysql-5-7-966063305.html">官方教學</a></p>
 <h3 id="下載並安裝MySQL-Server"><a href="#下載並安裝MySQL-Server" class="headerlink" title="下載並安裝MySQL Server"></a>下載並安裝MySQL Server</h3><p>首先先安裝mysql-server</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install mysql-server</span><br></pre></td></tr></table></figure>
+
 <p>檢查MySQL的版本，此教學是以5.7.X做的，其他版本請至JIRA官方觀看</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo mysql --version</span><br></pre></td></tr></table></figure>
+
 <p>接著，用<strong>管理者權限</strong>編輯<code>/etc/mysql/my.cnf</code>。</p>
 <ul>
 <li><p>設定以下規則</p>
-  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[mysqld]</span><br><span class="line">...</span><br><span class="line">default-storage-engine=INNODB</span><br><span class="line">character-set-server=utf8mb4</span><br><span class="line">innodb_default_row_format=DYNAMIC</span><br><span class="line">innodb_large_prefix=ON</span><br><span class="line">innodb_file_format=Barracuda</span><br><span class="line">innodb_log_file_size=2G</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[mysqld]</span><br><span class="line">...</span><br><span class="line">default-storage-engine&#x3D;INNODB</span><br><span class="line">character-set-server&#x3D;utf8mb4</span><br><span class="line">innodb_default_row_format&#x3D;DYNAMIC</span><br><span class="line">innodb_large_prefix&#x3D;ON</span><br><span class="line">innodb_file_format&#x3D;Barracuda</span><br><span class="line">innodb_log_file_size&#x3D;2G</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>假如有此行的話請刪除，確保sql_mode參數不是<em>NO_AUTO_VALUE_ON_ZERO</em>：</p>
-  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[mysqld]</span><br><span class="line">…</span><br><span class="line">sql_mode = NO_AUTO_VALUE_ON_ZERO</span><br><span class="line">…</span><br></pre></td></tr></table></figure>
+  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[mysqld]</span><br><span class="line">…</span><br><span class="line">sql_mode &#x3D; NO_AUTO_VALUE_ON_ZERO</span><br><span class="line">…</span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
 <p>進入MySQL並建立名為<strong>JiraDB</strong>的資料庫</p>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">sudo mysql -u root -p</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> JiraDB <span class="built_in">character</span> <span class="keyword">set</span> utf8mb4 <span class="keyword">collate</span> utf8mb4_bin;</span><br></pre></td></tr></table></figure>
+
 <p>正確建立後會顯示</p>
 <blockquote>
 <p>Query OK, 1 row affected</p>
@@ -469,10 +486,11 @@ height:50vh;
 <p>接著確保用戶有連接數據庫的權限</p>
 <ul>
 <li><p>適用於5.7.0~5.7.5</p>
-  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span>,<span class="keyword">INSERT</span>,<span class="keyword">UPDATE</span>,<span class="keyword">DELETE</span>,<span class="keyword">CREATE</span>,<span class="keyword">DROP</span>,<span class="keyword">ALTER</span>,<span class="keyword">INDEX</span> <span class="keyword">on</span> &lt;JIRADB&gt;.* <span class="keyword">TO</span> <span class="string">'&lt;USERNAME&gt;'</span>@<span class="string">'&lt;JIRA_SERVER_HOSTNAME&gt;'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">'&lt;PASSWORD&gt;'</span>;</span><br><span class="line"><span class="keyword">flush</span> <span class="keyword">privileges</span>;</span><br></pre></td></tr></table></figure>
+  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span>,<span class="keyword">INSERT</span>,<span class="keyword">UPDATE</span>,<span class="keyword">DELETE</span>,<span class="keyword">CREATE</span>,<span class="keyword">DROP</span>,<span class="keyword">ALTER</span>,<span class="keyword">INDEX</span> <span class="keyword">on</span> &lt;JIRADB&gt;.* <span class="keyword">TO</span> <span class="string">&#x27;&lt;USERNAME&gt;&#x27;</span>@<span class="string">&#x27;&lt;JIRA_SERVER_HOSTNAME&gt;&#x27;</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">&#x27;&lt;PASSWORD&gt;&#x27;</span>;</span><br><span class="line"><span class="keyword">flush</span> <span class="keyword">privileges</span>;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>適用於5.7.6以上的版本</p>
-  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span>,<span class="keyword">INSERT</span>,<span class="keyword">UPDATE</span>,<span class="keyword">DELETE</span>,<span class="keyword">CREATE</span>,<span class="keyword">DROP</span>,<span class="keyword">REFERENCES</span>,<span class="keyword">ALTER</span>,<span class="keyword">INDEX</span> <span class="keyword">on</span> &lt;JIRADB&gt;.* <span class="keyword">TO</span> <span class="string">'&lt;USERNAME&gt;'</span>@<span class="string">'&lt;JIRA_SERVER_HOSTNAME&gt;'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">'&lt;PASSWORD&gt;'</span>;</span><br><span class="line"><span class="keyword">flush</span> <span class="keyword">privileges</span>;</span><br></pre></td></tr></table></figure>
+  <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span>,<span class="keyword">INSERT</span>,<span class="keyword">UPDATE</span>,<span class="keyword">DELETE</span>,<span class="keyword">CREATE</span>,<span class="keyword">DROP</span>,<span class="keyword">REFERENCES</span>,<span class="keyword">ALTER</span>,<span class="keyword">INDEX</span> <span class="keyword">on</span> &lt;JIRADB&gt;.* <span class="keyword">TO</span> <span class="string">&#x27;&lt;USERNAME&gt;&#x27;</span>@<span class="string">&#x27;&lt;JIRA_SERVER_HOSTNAME&gt;&#x27;</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">&#x27;&lt;PASSWORD&gt;&#x27;</span>;</span><br><span class="line"><span class="keyword">flush</span> <span class="keyword">privileges</span>;</span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
 <blockquote>
@@ -480,11 +498,14 @@ height:50vh;
 </blockquote>
 <p>輸入<code>exit</code>即可離開mysql指令介面</p>
 <p>以服務形式開啟SQL Server<br><code>service mysqld start</code></p>
-<h3 id="下載MySQL-JDBC驅動至JIRA-library"><a href="#下載MySQL-JDBC驅動至JIRA-library" class="headerlink" title="下載MySQL JDBC驅動至JIRA library"></a>下載MySQL JDBC驅動至JIRA library</h3><p>下載JDBC Connector/J 5.1<br>如果連結失效的話請至<a href="https://dev.mysql.com/downloads/connector/j/5.1.html" target="_blank" rel="noopener">這裡</a>找</p>
+<h3 id="下載MySQL-JDBC驅動至JIRA-library"><a href="#下載MySQL-JDBC驅動至JIRA-library" class="headerlink" title="下載MySQL JDBC驅動至JIRA library"></a>下載MySQL JDBC驅動至JIRA library</h3><p>下載JDBC Connector/J 5.1<br>如果連結失效的話請至<a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/connector/j/5.1.html">這裡</a>找</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.47.tar.gz</span><br></pre></td></tr></table></figure>
+
 <p>接著解壓縮並且移動到<code>&lt;Jira-installation-directory&gt;/lib</code></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -xzf mysql-connector-java-5.1.47.tar.gz</span><br><span class="line">mv mysql-connector-java-5.1.47.bin.jar &lt;Jira-installation-directory&gt;/lib/</span><br></pre></td></tr></table></figure>
+
 <h2 id="執行JIRA"><a href="#執行JIRA" class="headerlink" title="執行JIRA"></a>執行JIRA</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> &lt;installation-directory&gt;/atlassian-jira-software-8.0.2-standalone/bin/</span><br><span class="line">sudo ./start-jira.sh</span><br></pre></td></tr></table></figure>
+
 <p><img src="sgTIY3F.png" alt="JIRA"><br>接著，JIRA就會作為背景服務執行了</p>
 <p>在瀏覽器輸入<code>http://(IP):8080/</code>即可使用JIRA</p>
 <h2 id="關閉JIRA"><a href="#關閉JIRA" class="headerlink" title="關閉JIRA"></a>關閉JIRA</h2><p>輸入<code>sudo ./stop-jira.sh</code>即可</p>
@@ -497,7 +518,7 @@ height:50vh;
         <li class="next">
             
                 <div class="nextSlogan">Next Post</div>
-                <a 2015 href="/2019/04/21/MacBook-Pro-2015-upgrade-ssd/" title="MacBook Pro 13" early 升級ssd">
+                <a href= "/2019/04/21/MacBook-Pro-2015-upgrade-ssd/" title= "MacBook Pro 13" Early 2015 升級SSD">
                     <div class="nextTitle">MacBook Pro 13" Early 2015 升級SSD</div>
                 </a>
             
@@ -505,7 +526,7 @@ height:50vh;
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2019/04/10/啟程/" title="啟程">
+                <a href= "/2019/04/10/%E5%95%9F%E7%A8%8B/" title= "啟程">
                     <div class="prevTitle">啟程</div>
                 </a>
             
@@ -537,13 +558,13 @@ height:50vh;
     
         
             
-                <a href="mailto:zephyrxvxx7@gmail.com" class="iconfont-archer email" title="email"></a>
+                <a href="mailto:zephyrxvxx7@gmail.com" class="iconfont-archer email" title=email ></a>
             
         
     
         
             
-                <a href="//github.com/zephyrxvxx7" class="iconfont-archer github" target="_blank" title="github"></a>
+                <a href="//github.com/zephyrxvxx7" class="iconfont-archer github" target="_blank" title=github></a>
             
         
     
@@ -563,7 +584,7 @@ height:50vh;
     
         
             
-                <a href="//instagram.com/zephyrxvxx7" class="iconfont-archer instagram" target="_blank" title="instagram"></a>
+                <a href="//instagram.com/zephyrxvxx7" class="iconfont-archer instagram" target="_blank" title=instagram></a>
             
         
     
@@ -620,7 +641,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#確認系統需求"><span class="toc-number">1.</span> <span class="toc-text">確認系統需求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安裝步驟-以Ubuntu為例"><span class="toc-number">2.</span> <span class="toc-text">安裝步驟(以Ubuntu為例)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安裝Java8"><span class="toc-number">2.1.</span> <span class="toc-text">安裝Java8</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#設定系統Java版本"><span class="toc-number">2.2.</span> <span class="toc-text">設定系統Java版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#下載JIRA"><span class="toc-number">2.3.</span> <span class="toc-text">下載JIRA</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#選擇安裝位置"><span class="toc-number">2.4.</span> <span class="toc-text">選擇安裝位置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#建立JIRA的檔案存放目錄"><span class="toc-number">2.5.</span> <span class="toc-text">建立JIRA的檔案存放目錄</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安裝MySQL-適用於5-7-X"><span class="toc-number">3.</span> <span class="toc-text">安裝MySQL(適用於5.7.X)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#下載並安裝MySQL-Server"><span class="toc-number">3.1.</span> <span class="toc-text">下載並安裝MySQL Server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#下載MySQL-JDBC驅動至JIRA-library"><span class="toc-number">3.2.</span> <span class="toc-text">下載MySQL JDBC驅動至JIRA library</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#執行JIRA"><span class="toc-number">4.</span> <span class="toc-text">執行JIRA</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#關閉JIRA"><span class="toc-number">5.</span> <span class="toc-text">關閉JIRA</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A2%BA%E8%AA%8D%E7%B3%BB%E7%B5%B1%E9%9C%80%E6%B1%82"><span class="toc-number">1.</span> <span class="toc-text">確認系統需求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%9D%E6%AD%A5%E9%A9%9F-%E4%BB%A5Ubuntu%E7%82%BA%E4%BE%8B"><span class="toc-number">2.</span> <span class="toc-text">安裝步驟(以Ubuntu為例)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%9DJava8"><span class="toc-number">2.1.</span> <span class="toc-text">安裝Java8</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A8%AD%E5%AE%9A%E7%B3%BB%E7%B5%B1Java%E7%89%88%E6%9C%AC"><span class="toc-number">2.2.</span> <span class="toc-text">設定系統Java版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BC%89JIRA"><span class="toc-number">2.3.</span> <span class="toc-text">下載JIRA</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%81%B8%E6%93%87%E5%AE%89%E8%A3%9D%E4%BD%8D%E7%BD%AE"><span class="toc-number">2.4.</span> <span class="toc-text">選擇安裝位置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BB%BA%E7%AB%8BJIRA%E7%9A%84%E6%AA%94%E6%A1%88%E5%AD%98%E6%94%BE%E7%9B%AE%E9%8C%84"><span class="toc-number">2.5.</span> <span class="toc-text">建立JIRA的檔案存放目錄</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%9DMySQL-%E9%81%A9%E7%94%A8%E6%96%BC5-7-X"><span class="toc-number">3.</span> <span class="toc-text">安裝MySQL(適用於5.7.X)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BC%89%E4%B8%A6%E5%AE%89%E8%A3%9DMySQL-Server"><span class="toc-number">3.1.</span> <span class="toc-text">下載並安裝MySQL Server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BC%89MySQL-JDBC%E9%A9%85%E5%8B%95%E8%87%B3JIRA-library"><span class="toc-number">3.2.</span> <span class="toc-text">下載MySQL JDBC驅動至JIRA library</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%B7%E8%A1%8CJIRA"><span class="toc-number">4.</span> <span class="toc-text">執行JIRA</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%9C%E9%96%89JIRA"><span class="toc-number">5.</span> <span class="toc-text">關閉JIRA</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -658,9 +679,20 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 3
+        Total : 4
         </div>
         <!-- search  -->
         
@@ -671,25 +703,39 @@ top:50vh;
     
     
     
+    <div class="archive-year"> 2020 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span><a class="archive-post-title" href= "/2020/11/15/%E4%BD%BF%E7%94%A8-kubeadm-%E5%BB%BA%E7%AB%8B-kubernetes-cluster/" >使用 kubeadm 建立 kubernetes cluster</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/21</span><a class="archive-post-title" href="/2019/04/21/MacBook-Pro-2015-upgrade-ssd/">MacBook Pro 13" Early 2015 升級SSD</a>
+            <span class="archive-post-date">04/21</span><a class="archive-post-title" href= "/2019/04/21/MacBook-Pro-2015-upgrade-ssd/" >MacBook Pro 13" Early 2015 升級SSD</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/11</span><a class="archive-post-title" href="/2019/04/11/JIRA-Server-安裝方法/">JIRA Server 安裝方法</a>
+            <span class="archive-post-date">04/11</span><a class="archive-post-title" href= "/2019/04/11/JIRA-Server-%E5%AE%89%E8%A3%9D%E6%96%B9%E6%B3%95/" >JIRA Server 安裝方法</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href="/2019/04/10/啟程/">啟程</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2019/04/10/%E5%95%9F%E7%A8%8B/" >啟程</a>
         </li>
     
-    </ul></div>
+    </div>
   </div>
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
@@ -698,13 +744,15 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="MacBook"><span class="iconfont-archer">&#xe606;</span>MacBook</span>
     
+        <span class="sidebar-tag-name" data-tags="kubernetes"><span class="iconfont-archer">&#xe606;</span>kubernetes</span>
+    
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
     <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
-    缺失模块。<br>
-    1、请确保node版本大于6.2<br>
-    2、在博客根目录（注意不是archer根目录）执行以下命令：<br>
-    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br>
+    缺失模块。<br/>
+    1、请确保node版本大于6.2<br/>
+    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
+    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
     3、在根目录_config.yml里添加配置：
     <pre style="color: #787878; font-size: 0.6rem;">
 jsonContent:
