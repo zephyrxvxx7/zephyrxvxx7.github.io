@@ -31,7 +31,7 @@
 <meta property="og:image" content="http://zephyrxvxx7.github.io/2019/04/11/JIRA-Server-%E5%AE%89%E8%A3%9D%E6%96%B9%E6%B3%95/QIs16zV.png">
 <meta property="og:image" content="http://zephyrxvxx7.github.io/2019/04/11/JIRA-Server-%E5%AE%89%E8%A3%9D%E6%96%B9%E6%B3%95/sgTIY3F.png">
 <meta property="article:published_time" content="2019-04-11T09:05:15.000Z">
-<meta property="article:modified_time" content="2019-08-30T04:17:39.000Z">
+<meta property="article:modified_time" content="2020-12-04T12:06:04.670Z">
 <meta property="article:author" content="Zephyr">
 <meta property="article:tag" content="教學">
 <meta name="twitter:card" content="summary">
@@ -412,8 +412,7 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <img src="/2019/04/11/JIRA-Server-%E5%AE%89%E8%A3%9D%E6%96%B9%E6%B3%95/Jira_Software@2x-blue.png" class="" title="Jira Software">
-
+        <p><img src="/2019/04/11/JIRA-Server-%E5%AE%89%E8%A3%9D%E6%96%B9%E6%B3%95/Jira_Software@2x-blue.png" alt="Jira Software"></p>
 <p>最近因為工作上的需要，主管想要一個可以完善的issue tracking平台，而主管就馬上跟我介紹JIRA，因為他也有使用的經驗。<br>而我在研究一陣子之後，發現JIRA的線上版非常不好用，插件也非常少，所以就決定轉戰本地版本(JIRA Server)。</p>
 <a id="more"></a>
 <p>但是在決定使用JIRA Server之後，在安裝的時候遇到了非常多的坑，這篇文章算是記錄起來，避免之後犯一樣的錯誤又要重查資料。</p>
@@ -437,7 +436,7 @@ height:50vh;
 <p><code>sudo apt-get install openjdk-8-jre</code></p>
 <h3 id="設定系統Java版本"><a href="#設定系統Java版本" class="headerlink" title="設定系統Java版本"></a>設定系統Java版本</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo update-alternatives --config java</span><br></pre></td></tr></table></figure>
 
-<p><img src="QIs16zV.png" alt="Java8"><br>選擇為<code>java8</code>的編號，在這裡是==2==</p>
+<p><img src="/2019/04/11/JIRA-Server-%E5%AE%89%E8%A3%9D%E6%96%B9%E6%B3%95/QIs16zV.png" alt="Java8"><br>選擇為<code>java8</code>的編號，在這裡是==2==</p>
 <p>設定<code>JAVA_HOME</code>環境變數</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> JAVA_HOME=<span class="string">&quot;/usr/lib/jvm/java-8-oracle&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -523,7 +522,7 @@ height:50vh;
 
 <h2 id="執行JIRA"><a href="#執行JIRA" class="headerlink" title="執行JIRA"></a>執行JIRA</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> &lt;installation-directory&gt;/atlassian-jira-software-8.0.2-standalone/bin/</span><br><span class="line">sudo ./start-jira.sh</span><br></pre></td></tr></table></figure>
 
-<p><img src="sgTIY3F.png" alt="JIRA"><br>接著，JIRA就會作為背景服務執行了</p>
+<p><img src="/2019/04/11/JIRA-Server-%E5%AE%89%E8%A3%9D%E6%96%B9%E6%B3%95/sgTIY3F.png" alt="JIRA"><br>接著，JIRA就會作為背景服務執行了</p>
 <p>在瀏覽器輸入<code>http://(IP):8080/</code>即可使用JIRA</p>
 <h2 id="關閉JIRA"><a href="#關閉JIRA" class="headerlink" title="關閉JIRA"></a>關閉JIRA</h2><p>輸入<code>sudo ./stop-jira.sh</code>即可</p>
 
