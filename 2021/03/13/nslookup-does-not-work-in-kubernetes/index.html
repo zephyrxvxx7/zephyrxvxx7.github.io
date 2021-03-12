@@ -20,20 +20,20 @@
     <meta name="keywords" content="hexo,hexo-blog,Coding,Life,Photography">
     
     <meta name="description" content="">
-    <meta name="description" content="就在剛剛我想要測試k8s內部service的A record所以先部署了一個busybox busybox.yaml apiVersion: v1kind: Podmetadata:  name: busybox  namespace: defaultspec:  containers:  - image: busybox    command:      - sleep      - &amp;quot">
+    <meta name="description" content="就在剛剛我想要測試k8s內部service的A record所以先部署了一個busybox然後就讓我發現了塵封3年已久的bug XD">
 <meta property="og:type" content="article">
 <meta property="og:title" content="nslookup 在 kubernetes 無法使用">
 <meta property="og:url" content="http://zephyrxvxx7.github.io/2021/03/13/nslookup-does-not-work-in-kubernetes/index.html">
 <meta property="og:site_name" content="Zephyr&#39;s Blog">
-<meta property="og:description" content="就在剛剛我想要測試k8s內部service的A record所以先部署了一個busybox busybox.yaml apiVersion: v1kind: Podmetadata:  name: busybox  namespace: defaultspec:  containers:  - image: busybox    command:      - sleep      - &amp;quot">
+<meta property="og:description" content="就在剛剛我想要測試k8s內部service的A record所以先部署了一個busybox然後就讓我發現了塵封3年已久的bug XD">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://github.com/docker-library/busybox/issues/48">
-<meta property="og:image" content="https://bugs.busybox.net/show_bug.cgi?id=11161#c4">
+<meta property="og:image" content="http://zephyrxvxx7.github.io/nsloopup.png">
+<meta property="og:image" content="http://zephyrxvxx7.github.io/2021/03/13/nslookup-does-not-work-in-kubernetes/nslookup2.png">
 <meta property="article:published_time" content="2021-03-12T19:06:17.000Z">
-<meta property="article:modified_time" content="2021-03-12T19:23:29.735Z">
+<meta property="article:modified_time" content="2021-03-12T19:27:21.840Z">
 <meta property="article:author" content="Zephyr">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://github.com/docker-library/busybox/issues/48">
+<meta name="twitter:image" content="http://zephyrxvxx7.github.io/nsloopup.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
@@ -404,24 +404,26 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>就在剛剛我想要測試k8s內部service的A record<br>所以先部署了一個busybox</p>
+        <p>就在剛剛我想要測試k8s內部service的A record<br>所以先部署了一個busybox<br>然後就讓我發現了塵封3年已久的bug XD</p>
+<a id="more"></a>
+
 <p>busybox.yaml</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Pod</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">busybox</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">default</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">containers:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">image:</span> <span class="string">busybox</span></span><br><span class="line">    <span class="attr">command:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">sleep</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;3600&quot;</span></span><br><span class="line">    <span class="attr">imagePullPolicy:</span> <span class="string">IfNotPresent</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">busybox</span></span><br><span class="line">  <span class="attr">restartPolicy:</span> <span class="string">Always</span></span><br></pre></td></tr></table></figure>
 
 <p>並且執行<code>kubectl create -f busybox.yaml</code>部署<br>然後執行<code>kubectl exec -it busybox -- sh</code><br>然而我正想快快樂樂的用<code>nslookup</code>檢查內部的A record</p>
-<p>結果跑出這種結果<br><a href="nsloopup.png">nslookup</a></p>
+<p>結果跑出這種結果<br><img src="/nsloopup.png" alt="nslookup"></p>
 <blockquote>
 <p>哭啊</p>
 </blockquote>
 <p>之後試了很多指令也都一樣，都try到快懷疑人生了<br>受不了了才去google有沒有人跟我有一樣的問題</p>
 <p>不查還不知道，一查不得了<br>這東西居然是3年前就有的bug，而且至今還沒有人想解這個問題，真是太酷了</p>
-<p><img src="https://github.com/docker-library/busybox/issues/48" alt="Nslookup does not work in latest busybox image">、<img src="https://bugs.busybox.net/show_bug.cgi?id=11161#c4" alt="nslookup doesn&#39;t work in kubernetes">分別是Github跟busybox自己的issue tracking平台</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/docker-library/busybox/issues/48">Nslookup does not work in latest busybox image</a>、<a target="_blank" rel="noopener" href="https://bugs.busybox.net/show_bug.cgi?id=11161#c4">nslookup doesn’t work in kubernetes</a>分別是Github跟busybox自己的issue tracking平台</p>
 <p>然後給出的建議是：用舊版的busybox(1.28)</p>
 <blockquote>
 <p>嗯，真的很妙</p>
 </blockquote>
 <p>所以把<code>image: busybox</code>改成<code>image: busybox:1.28</code>就沒有問題了</p>
-<p><a href="nslookup2.png">nslookup2</a></p>
+<p><img src="/2021/03/13/nslookup-does-not-work-in-kubernetes/nslookup2.png" alt="nslookup2"></p>
 <p>為什麼要搞一個不能用的release出來呢<br>而且還過了3年都還不修==</p>
 
     </article>
