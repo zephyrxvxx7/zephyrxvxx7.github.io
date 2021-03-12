@@ -27,13 +27,13 @@
 <meta property="og:site_name" content="Zephyr&#39;s Blog">
 <meta property="og:description" content="就在剛剛我想要測試k8s內部service的A record所以先部署了一個busybox然後就讓我發現了塵封3年已久的bug XD">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="http://zephyrxvxx7.github.io/nsloopup.png">
+<meta property="og:image" content="http://zephyrxvxx7.github.io/2021/03/13/nslookup-does-not-work-in-kubernetes/nslookup.png">
 <meta property="og:image" content="http://zephyrxvxx7.github.io/2021/03/13/nslookup-does-not-work-in-kubernetes/nslookup2.png">
 <meta property="article:published_time" content="2021-03-12T19:06:17.000Z">
-<meta property="article:modified_time" content="2021-03-12T19:27:21.840Z">
+<meta property="article:modified_time" content="2021-03-12T19:29:24.079Z">
 <meta property="article:author" content="Zephyr">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://zephyrxvxx7.github.io/nsloopup.png">
+<meta name="twitter:image" content="http://zephyrxvxx7.github.io/2021/03/13/nslookup-does-not-work-in-kubernetes/nslookup.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
@@ -411,7 +411,7 @@ height:50vh;
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Pod</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">busybox</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">default</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">containers:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">image:</span> <span class="string">busybox</span></span><br><span class="line">    <span class="attr">command:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">sleep</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;3600&quot;</span></span><br><span class="line">    <span class="attr">imagePullPolicy:</span> <span class="string">IfNotPresent</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">busybox</span></span><br><span class="line">  <span class="attr">restartPolicy:</span> <span class="string">Always</span></span><br></pre></td></tr></table></figure>
 
 <p>並且執行<code>kubectl create -f busybox.yaml</code>部署<br>然後執行<code>kubectl exec -it busybox -- sh</code><br>然而我正想快快樂樂的用<code>nslookup</code>檢查內部的A record</p>
-<p>結果跑出這種結果<br><img src="/nsloopup.png" alt="nslookup"></p>
+<p>結果跑出這種結果<br><img src="/2021/03/13/nslookup-does-not-work-in-kubernetes/nslookup.png" alt="nslookup"></p>
 <blockquote>
 <p>哭啊</p>
 </blockquote>
